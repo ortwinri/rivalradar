@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RivalRadar — Wisse, was deine Konkurrenten ändern, bevor deine Kunden es dir sagen</title>
+<meta name="description" content="Wöchentlicher KI-Digest über Pricing-, Changelog-, Blog- und Hiring-Änderungen deiner Konkurrenten — auch hinter JavaScript & Login. Keine Roh-Diffs.">
+<style>
+  :root{--bg:#0b0f17;--card:#131a26;--ink:#e8edf5;--mut:#9fb0c8;--acc:#4f8cff;--ok:#34d399;--line:#1f2a3a}
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+  .wrap{max-width:860px;margin:0 auto;padding:0 20px}
+  h1{font-size:2.3rem;line-height:1.15;margin:.2em 0}
+  h2{font-size:1.45rem;margin:2.2em 0 .6em}
+  p.lead{font-size:1.2rem;color:var(--mut)}
+  .acc{color:var(--acc)}
+  header{padding:64px 0 24px;text-align:center}
+  .btn{display:inline-block;background:var(--acc);color:#fff;border:0;border-radius:10px;padding:14px 22px;font-size:1.05rem;font-weight:600;cursor:pointer;text-decoration:none}
+  .btn.alt{background:transparent;border:1px solid var(--line);color:var(--ink)}
+  .muted{color:var(--mut);font-size:.92rem}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  ul.clean{list-style:none;padding:0}
+  ul.clean li{padding:8px 0 8px 28px;position:relative}
+  ul.clean li:before{content:"→";position:absolute;left:0;color:var(--acc)}
+  .grid{display:grid;gap:16px}
+  @media(min-width:640px){.grid.c2{grid-template-columns:1fr 1fr}.grid.c3{grid-template-columns:1fr 1fr 1fr}}
+  .digest{background:#0e1420;border:1px solid var(--line);border-radius:14px;padding:20px;font-size:.95rem}
+  .digest h3{margin:.2em 0;color:#fff}
+  .digest table{width:100%;border-collapse:collapse;margin:10px 0}
+  .digest th,.digest td{border:1px solid var(--line);padding:7px 9px;text-align:left;font-size:.88rem;vertical-align:top}
+  .price{display:flex;flex-direction:column;gap:6px}
+  .price .amt{font-size:1.8rem;font-weight:700}
+  .tag{display:inline-block;background:#14233f;color:var(--acc);border-radius:999px;padding:3px 10px;font-size:.78rem;font-weight:600}
+  form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+  input[type=email]{flex:1;min-width:240px;background:#0e1420;border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:14px}
+  footer{margin:60px 0 40px;text-align:center}
+  .ok{color:var(--ok)}
+  .center{text-align:center}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <span class="tag">Competitive Intelligence · automatisiert</span>
+  <h1>Wisse, was deine Konkurrenten ändern —<br><span class="acc">bevor deine Kunden es dir sagen.</span></h1>
+  <p class="lead">RivalRadar überwacht Pricing-Pages, Changelogs, Blogs &amp; Stellenanzeigen deiner Konkurrenten — auch hinter JavaScript &amp; Login — und schickt dir <b>einen wöchentlichen KI-Digest: was sich geändert hat und warum es zählt.</b> Keine Roh-Diffs, kein Alert-Müll.</p>
+  <p><a class="btn" href="#waitlist">Auf die Waitlist →</a> &nbsp; <a class="btn alt" href="#digest">Beispiel-Digest ansehen</a></p>
+  <p class="muted">Erster Digest gratis. Die ersten 20 bekommen 3 Monate kostenlos fürs Feedback.</p>
+</header>
+
+<main class="wrap">
+
+  <h2>Das Problem</h2>
+  <div class="card">
+    <ul class="clean">
+      <li>Generische Change-Monitore schicken dir <b>Roh-Diffs</b> → du ertrinkst in Rauschen und übersiehst das Wichtige.</li>
+      <li>Die wertvollen Quellen (Pricing hinter JS, Changelogs, Portale hinter Login) <b>brechen</b> bei den meisten Tools.</li>
+      <li>Manuell die Konkurrenz tracken macht niemand → du erfährst Preisänderungen zu spät und verlierst Deals.</li>
+    </ul>
+  </div>
+
+  <h2>So funktioniert's</h2>
+  <div class="grid c3">
+    <div class="card"><b>1. Konkurrenten eintragen</b><p class="muted">Nur die Domains. Kein Setup-Aufwand.</p></div>
+    <div class="card"><b>2. Wir überwachen</b><p class="muted">Pricing, Changelog, Blog, Jobs — JS- &amp; login-fähig, vollautomatisch.</p></div>
+    <div class="card"><b>3. Du bekommst Klartext</b><p class="muted">Montags ein KI-Digest: Änderung + strategische Bedeutung. Sofort-Alert bei Preisänderungen.</p></div>
+  </div>
+
+  <h2 id="digest">So sieht dein Montag aus</h2>
+  <p class="muted">Echter, automatisch erzeugter Digest für den Auth-SaaS-Markt (Clerk · WorkOS · Stytch):</p>
+  <div class="digest">
+    <h3>🔍 Auth-SaaS Competitive Watch — KW 24/2026</h3>
+    <p><b>TL;DR</b></p>
+    <ul>
+      <li><b>WorkOS fährt aggressiven Free-Tier-Angriff:</b> erste <b>1 Mio. User gratis</b> (AuthKit) — vs. Clerks 50.000 MRU/App. Direkter Druck aufs untere Segment.</li>
+      <li><b>WorkOS pivotet zu AI-Agenten/MCP &amp; Enterprise-IT:</b> MCP-Auth Resource Indicators, User-Scoped API Keys, Pipes Custom Providers, Rust SDK — ~wöchentliche Releases.</li>
+      <li><b>Clerk kontert mit DX:</b> <code>clerk deploy</code> CLI (Dev→Prod in einem Befehl) ist GA — und macht <b>B2B-Auth gratis in allen Plänen</b> (Angriff auf WorkOS' B2B-Heimat).</li>
+    </ul>
+    <table>
+      <tr><th></th><th>Clerk</th><th>WorkOS</th></tr>
+      <tr><td>Free</td><td>50.000 MRU/App, 3 Seats</td><td>erste 1 Mio. User gratis</td></tr>
+      <tr><td>Modell</td><td>Plan-Stufen + Add-ons</td><td>Pay-as-you-go, modular pro Feature</td></tr>
+      <tr><td>SSO</td><td>1 in Pro inkl., dann $75/Verb.</td><td>$125→$50/Verb. (Staffel)</td></tr>
+    </table>
+    <p class="muted">Implikation: WorkOS' „1M gratis" untergräbt Free-Tiers im Markt; MCP/Agenten-Auth wird Tischeinsatz; Clerks $75/SSO-Connection wirkt ab Volumen teuer.</p>
+  </div>
+  <p class="center muted">Das liefert kein Change-Detector: nicht „12 Pixel geändert", sondern <i>„WorkOS macht jetzt 1M User gratis — das untergräbt dein Free-Tier."</i></p>
+
+  <h2>Preise</h2>
+  <div class="grid c2">
+    <div class="card price">
+      <span class="tag">Starter</span>
+      <span class="amt">29 €<span class="muted" style="font-size:1rem">/Mon</span></span>
+      <span class="muted">bis 3 Konkurrenten · wöchentlicher Digest · Preis-Alerts</span>
+      <button class="btn" onclick="pick('Starter 29€')">Das will ich</button>
+    </div>
+    <div class="card price">
+      <span class="tag">Team</span>
+      <span class="amt">79 €<span class="muted" style="font-size:1rem">/Mon</span></span>
+      <span class="muted">bis 10 Konkurrenten · Slack/Teams-Alerts · tägliche Preis-Checks</span>
+      <button class="btn" onclick="pick('Team 79€')">Das will ich</button>
+    </div>
+  </div>
+
+  <h2 id="waitlist">Auf die Waitlist</h2>
+  <div class="card center">
+    <p>Trag dich ein — die ersten 20 bekommen <b>3 Monate gratis</b> fürs Feedback. Sag mir gern deine Nische.</p>
+    <!-- ENDPOINT EINSETZEN: Formspree-/Formspark-ID. Bis dahin zeigt das Formular die Demo-Bestätigung. -->
+    <form id="wl" action="https://formspree.io/f/DEINE_ID" method="POST">
+      <input type="email" name="email" placeholder="deine@firma.de" required>
+      <input type="hidden" name="plan_interest" id="plan">
+      <input type="hidden" name="source" value="landing">
+      <button class="btn" type="submit">Eintragen</button>
+    </form>
+    <p id="msg" class="ok" style="display:none">✅ Danke! Du bist auf der Liste — ich melde mich mit dem ersten Digest.</p>
+    <p class="muted">Kein Spam. Nur Produkt-Updates + dein erster Digest.</p>
+  </div>
+</main>
+
+<footer class="wrap muted">
+  RivalRadar (Arbeitsname) · vollautomatisch erzeugt: Browser-Rendering → Extraktion → KI-Synthese.
+</footer>
+
+<script>
+  function pick(plan){
+    document.getElementById('plan').value = plan;
+    document.getElementById('waitlist').scrollIntoView({behavior:'smooth'});
+    document.querySelector('input[type=email]').focus();
+  }
+  // Fake-Door + Waitlist: per fetch absenden, Inline-Bestätigung. Ohne echten Endpoint -> Demo-Modus.
+  document.getElementById('wl').addEventListener('submit', async function(e){
+    e.preventDefault();
+    const f = e.target, msg = document.getElementById('msg');
+    const real = !f.action.includes('DEINE_ID');
+    try{
+      if(real){ await fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}}); }
+    }catch(_){}
+    f.style.display='none'; msg.style.display='block';
+    // optional: console-Signal fürs Tracking
+    console.log('waitlist', f.email.value, document.getElementById('plan').value);
+  });
+</script>
+</body>
+</html>
