@@ -31,8 +31,8 @@
   .price{display:flex;flex-direction:column;gap:6px}
   .price .amt{font-size:1.8rem;font-weight:700}
   .tag{display:inline-block;background:#14233f;color:var(--acc);border-radius:999px;padding:3px 10px;font-size:.78rem;font-weight:600}
-  form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
-  input[type=email]{flex:1;min-width:240px;background:#0e1420;border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:14px}
+  form{display:flex;flex-direction:column;gap:10px;margin-top:14px;text-align:left}
+  input[type=email],input[type=text],select{width:100%;background:#0e1420;border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:14px;font-size:1rem}
   footer{margin:60px 0 40px;text-align:center}
   .ok{color:var(--ok)}
   .center{text-align:center}
@@ -103,13 +103,18 @@
 
   <h2 id="waitlist">Auf die Waitlist</h2>
   <div class="card center">
-    <p>Trag dich ein — die ersten 20 bekommen <b>3 Monate gratis</b> fürs Feedback. Sag mir gern deine Nische.</p>
-    <!-- ENDPOINT EINSETZEN: Formspree-/Formspark-ID. Bis dahin zeigt das Formular die Demo-Bestätigung. -->
+    <p>Sag uns, <b>welche Konkurrenten</b> du beobachten willst — die ersten 20 bekommen ihren <b>ersten Digest gratis</b> + 3 Monate kostenlos fürs Feedback.</p>
     <form id="wl" action="https://formspree.io/f/xrevrodz" method="POST">
       <input type="email" name="email" placeholder="deine@firma.de" required>
-      <input type="hidden" name="plan_interest" id="plan">
+      <input type="text" name="competitors" placeholder="Konkurrenten, die wir beobachten sollen — z. B. clerk.com, workos.com" required>
+      <select name="plan_interest" id="plan" required>
+        <option value="" disabled selected>Woran bist du interessiert?</option>
+        <option value="Starter 29€">Starter — 29 €/Mon (bis 3 Konkurrenten)</option>
+        <option value="Team 79€">Team — 79 €/Mon (bis 10, Slack/Teams)</option>
+        <option value="Nur Gratis-Digest">Erstmal nur den Gratis-Digest</option>
+      </select>
       <input type="hidden" name="source" value="landing">
-      <button class="btn" type="submit">Eintragen</button>
+      <button class="btn" type="submit">Eintragen + Gratis-Digest sichern</button>
     </form>
     <p id="msg" class="ok" style="display:none">✅ Danke! Du bist auf der Liste — ich melde mich mit dem ersten Digest.</p>
     <p class="muted">Kein Spam. Nur Produkt-Updates + dein erster Digest.</p>
